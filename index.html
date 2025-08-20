@@ -72,7 +72,7 @@
         </div>
       </div>
     </div>
-    <div class="sub">See how a Regular Savings Plan (RSP) compounds over time.</div>
+    <div class="sub">See how a SaveUP - Regular Savings Plan (RSP) compounds over time.</div>
   </div>
 
   <!-- Controls + KPIs (left/right layout preserved) -->
@@ -157,7 +157,7 @@
     <div class="grid-center">
       <div>
         <div class="badge">💡 <b>Message:</b> Start from <b>S$1</b>. Small, regular steps compound.</div>
-        <div class="badge">📉 <b>Dips help buyers:</b> RSP buys more units when prices are lower.</div>
+        <div class="badge">📉 <b>Dips help buyers:</b> SaveUP buys more units when prices are lower.</div>
         <div class="badge">🧠 <b>No timing stress:</b> set‑and‑forget consistency.</div>
       </div>
       <div class="talk">
@@ -276,7 +276,7 @@ function recalc(){
   document.getElementById('k_rate_tip').textContent = years<=5? 'Using 5‑year CAGR' : 'Using 10‑year CAGR';
 
   const labels = Array.from({length: years*12}, (_,i)=>`M${i+1}`);
-  const ds = [{label:'RSP Value', data:rsp.series}];
+  const ds = [{label:'SaveUP Value', data:rsp.series}];
 
   if(chart) chart.destroy();
   chart = new Chart(document.getElementById('chart').getContext('2d'), {
@@ -290,7 +290,7 @@ function recalc(){
   });
 
   document.getElementById('resultLine').innerHTML =
-    `Your RSP value after <b>${years} years</b>: <b>${fmt(rsp.value)}</b>`;
+    `Your SaveUP value after <b>${years} years</b>: <b>${fmt(rsp.value)}</b>`;
 }
 
 function resetForm(){
